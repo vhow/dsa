@@ -52,9 +52,7 @@ public class ArrayList<E> implements IList<E> {
     private void ensureCapacity() {
         if (data.length <= size + 2) {
             final Object[] newArr = new Object[data.length * 2];
-            for (int i = 0; i < data.length; i++) {
-                newArr[i] = data[i];
-            }
+            System.arraycopy(data, 0, newArr, 0, data.length);
             data = newArr;
         }
     }
@@ -67,11 +65,13 @@ public class ArrayList<E> implements IList<E> {
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
+        final StringBuilder builder = new StringBuilder();
         builder.append('[');
         for (int i = 0; i < size; i++) {
             builder.append(data[i]);
-            builder.append(", ");
+            if (i < size - 1) {
+                builder.append(", ");
+            }
         }
         builder.append(']');
         return builder.toString();

@@ -8,6 +8,7 @@ public class Watch {
     }
 
     public void stop() {
-        System.out.println("time: " + (System.currentTimeMillis() - start));
+        final long duration = System.currentTimeMillis() - start;
+        System.out.println("time cost: " + duration + "ms");
     }
 }

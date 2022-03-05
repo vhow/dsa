@@ -1,27 +1,27 @@
 import java.util.Iterator;
 
 public class App implements Iterable<String> {
-    private String[] items;
-    private int n;
+    private final String[] items;
+    private int size;
 
     public App(int capacity) {
         items = new String[capacity];
     }
 
     public boolean isEmpty() {
-        return n == 0;
+        return size == 0;
     }
 
     public boolean isFull() {
-        return n == items.length;
+        return size == items.length;
     }
 
     public void push(String item) {
-        items[n++] = item;
+        items[size++] = item;
     }
 
     public String pop() {
-        return items[--n];
+        return items[--size];
     }
 
 
@@ -30,7 +30,7 @@ public class App implements Iterable<String> {
         return null;
     }
 
-    private class ReverseArrayIteraotr implements Iterator<String> {
+    private class ReverseArrayIterator implements Iterator<String> {
         @Override
         public boolean hasNext() {
             return false;
