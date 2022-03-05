@@ -2,7 +2,7 @@ package io.github.vhow.dsa.sort;
 
 public class MergeSort extends AbstractSort {
     @Override
-    <T extends Comparable<T>> void sort(T[] a) {
+    public <T extends Comparable<T>> void sort(T[] a) {
         final Comparable[] aux = new Comparable[a.length];
         sort(a, aux, 0, a.length - 1);
     }

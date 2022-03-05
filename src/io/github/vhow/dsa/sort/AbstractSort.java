@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class AbstractSort {
-    abstract <T extends Comparable<T>> void sort(T[] a);
+    public abstract <T extends Comparable<T>> void sort(T[] a);
 
     protected void test() {
         final ThreadLocalRandom random = ThreadLocalRandom.current();

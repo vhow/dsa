@@ -2,7 +2,7 @@ package io.github.vhow.dsa.sort;
 
 public class QuickSort extends AbstractSort {
     @Override
-    <T extends Comparable<T>> void sort(T[] a) {
+    public <T extends Comparable<T>> void sort(T[] a) {
         sort(a, 0, a.length - 1);
     }
 

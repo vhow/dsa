@@ -2,7 +2,7 @@ package io.github.vhow.dsa.sort;
 
 public class SelectionSort extends AbstractSort {
     @Override
-    <T extends Comparable<T>> void sort(T[] a) {
+    public <T extends Comparable<T>> void sort(T[] a) {
         for (int i = 0; i < a.length; i++) {
             int min = i;
             for (int j = i + 1; j < a.length; j++) {

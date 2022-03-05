@@ -2,7 +2,7 @@ package io.github.vhow.dsa.sort;
 
 public class BubbleSort extends AbstractSort {
     @Override
-    <T extends Comparable<T>> void sort(T[] a) {
+    public <T extends Comparable<T>> void sort(T[] a) {
         for (int i = 0; i < a.length - 1; i++) {
             boolean swapped = false;
             for (int j = 0; j < a.length - 1 - i; j++) {
