@@ -15,14 +15,14 @@ public class QuickSort extends AbstractSort {
     }
 
     private <T extends Comparable<T>> int partition(T[] a, int start, int end) {
-        int i = start;
-        for (int j = start; j < end; j++) {
-            if (less(a, j, end)) {
-                swap(a, j, i++);
+        int left = start;
+        for (int i = start; i < end; i++) {
+            if (less(a, i, end)) {
+                swap(a, i, left++);
             }
         }
-        swap(a, i, end);
-        return i;
+        swap(a, left, end);
+        return left;
     }
 
     public static void main(String[] args) {
